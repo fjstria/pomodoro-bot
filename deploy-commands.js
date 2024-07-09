@@ -36,8 +36,7 @@ const rest = new REST().setToken(token);
 		const data = await rest.put(
             Routes.applicationCommands(clientId),
             { body: commands },
-        );
-        
+        );        
 
 		console.log(`Successfully reloaded ${data.length} application (/) commands.`);
 	} catch (error) {
