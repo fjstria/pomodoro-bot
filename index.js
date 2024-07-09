@@ -36,9 +36,6 @@ client.once(Events.ClientReady, readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 });
 
-// Log in to Discord with your client's token
-client.login(token);
-
 // Handle command interactions
 client.on(Events.InteractionCreate, async interaction => {
 	if (!interaction.isChatInputCommand()) return;	// Only handle slash commands
@@ -61,3 +58,6 @@ client.on(Events.InteractionCreate, async interaction => {
 		}
 	}
 });
+
+// Log in to Discord with your client's token
+client.login(token);
